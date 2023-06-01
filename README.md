@@ -136,6 +136,7 @@ Una vez clonado se ejecutan los siguientes comandos
    sudo nano salida-serial.txt
 ```
 Mostrandonos este resultado en pantalla
+
 ![Captura de Pantalla 2023-05-31 a la(s) 12 53 42 p  m](https://github.com/mpocampod/Reto/assets/68925248/2b6ae995-b84b-4e0c-9237-d2b60765b43d)
 
 <div id='Map'/> 
@@ -150,7 +151,7 @@ Tendriamos este resultado
 ![Captura de Pantalla 2023-05-31 a la(s) 1 02 56 p  m](https://github.com/mpocampod/Reto/assets/68925248/0d06a572-c1e4-49d0-90c2-7b48a0761562)
 *******
 
-**REFERENCIAS**
+**REFERENCIAS** <br>
 https://github.com/ST0263/st0263-2023-1/tree/main/Laboratorio%20N6-MapReduce
 https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html
 *******
