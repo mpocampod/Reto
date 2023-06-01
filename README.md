@@ -81,7 +81,7 @@ aws emr create-cluster \
 **Configuración** <br>
 **Name:** cluster-retlab <br>
 **Amazon EMR release:** emr-6.10.0 <br>
-**Applications** <br>
+**Applications:**
     - Hue 4.4.0
     - Spark 2.4.3
     - Hadoop 2.8.5
