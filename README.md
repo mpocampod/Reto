@@ -40,6 +40,52 @@ Luego con las credenciales de IAM de nuestra sesion en AWS ejecutaremos los sigu
 ```
 ![Captura de Pantalla 2023-05-31 a la(s) 10 57 34 a  m](https://github.com/mpocampod/Reto/assets/68925248/f2239dee-fa4a-484a-8be9-24801a21fc53)
 
-
 *******
 
+<div id='S3'/> 
+
+### **2. Creación del bucket S3 en consola**
+
+Después de configurar las credenciales, lo que haremos será crear el servicio de almacenamiento de objetos S3 a través del comando
+```sh
+    aws s3 mb s3://mpocampod-lab6-emr
+```
+![Captura de Pantalla 2023-05-31 a la(s) 11 38 35 p  m](https://github.com/mpocampod/Reto/assets/68925248/8be0689d-1426-4ea2-8b3c-139f50de612b)
+ 
+ Y comprobaremos su creación y los S3 anteriormente creados con el comando 
+ ```sh
+    aws s3 ls
+```
+![Captura de Pantalla 2023-05-31 a la(s) 11 41 13 p  m](https://github.com/mpocampod/Reto/assets/68925248/876bd1a9-052c-411e-a014-f63df417002f)
+
+En nuestra cuenta de AWS se debe ver asi
+
+![Captura de Pantalla 2023-05-31 a la(s) 11 05 46 a  m](https://github.com/mpocampod/Reto/assets/68925248/b4fe3108-8912-4d61-9ed5-84adad2681b9)
+
+*******
+<div id='Cluster'/> 
+
+### **3. Creación del clúster en consola**
+
+Para la creación del clúster utilizamos el siguiente comando que nos dice las preferencias de lo que queremos incluir en nuestro clúster
+ ```sh
+    aws emr create-cluster \
+    --name cluster-retlab \
+    --release-label emr-6.10.0 \
+    --service-role EMR_DefaultRole \
+    --ec2-attributes KeyName=emr,InstanceProfile=EMR_EC2_DefaultRole \
+    --applications Name=Hue Name=Spark Name=Hadoop Name=Sqoop Name=Hive \
+    --instance-groups InstanceGroupType=MASTER,InstanceCount=1,InstanceType=m4.large InstanceGroupType=CORE,InstanceCount=2,InstanceType=m4.large InstanceGroupType=TASK,InstanceCount=1,InstanceType=m4.large \
+    --no-auto-terminate
+```
+
+Una vez creado el clúster por linea de comandos en nuestra cuenta de AWS se debe ver así
+*** EMR ***
+![Captura de Pantalla 2023-05-31 a la(s) 12 18 40 p  m](https://github.com/mpocampod/Reto/assets/68925248/8c3d2adb-a2a6-41d3-8978-3737f35561c5)
+
+![Captura de Pantalla 2023-05-31 a la(s) 12 18 31 p  m](https://github.com/mpocampod/Reto/assets/68925248/4b27642e-a55b-4b74-9979-270fb71198ac)
+
+*** Instancias EC2***
+![Captura de Pantalla 2023-05-31 a la(s) 12 19 49 p  m](https://github.com/mpocampod/Reto/assets/68925248/e67c9e8d-09a0-4fc7-a507-f1f00618e2b7)
+
+*******
