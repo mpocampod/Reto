@@ -69,7 +69,7 @@ En nuestra cuenta de AWS se debe ver asi
 
 Para la creación del clúster utilizamos el siguiente comando que nos dice las preferencias de lo que queremos incluir en nuestro clúster
  ```sh
-    aws emr create-cluster \
+aws emr create-cluster \
     --name cluster-retlab \
     --release-label emr-6.10.0 \
     --service-role EMR_DefaultRole \
