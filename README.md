@@ -8,7 +8,7 @@
 
 **Tabla de Contenido**
 
-1. [Descarga de AWS CLI](#AWS CLI)
+1. [Descarga de AWS CLI](#AWS)
 2. [Creación del bucket S3 en consola](#S3)
 3. [Creación del clúster en consola](#Cluster) 
 4. [Ejecución de la versión serial/secuencial de la aplicación de wordcount-local.py](#ejecución) 
@@ -16,7 +16,7 @@
 
 *******
 
-<div id='AWS CLI'/> 
+<div id='AWS'/> 
 
 ### **1. Descarga de AWS CLI**
 
