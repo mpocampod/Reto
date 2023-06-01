@@ -19,8 +19,7 @@
 <div id='AWS'/> 
 
 ### **1. Descarga de AWS CLI**
-Link para descargar AWS CLI (En mi caso para MacOS)
-<div id= 'https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html'/>
+[Descarga AWS CLI (En mi caso para MacOS)] (https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html)
 
 *******
 
