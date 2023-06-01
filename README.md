@@ -78,15 +78,15 @@ aws emr create-cluster \
     --instance-groups InstanceGroupType=MASTER,InstanceCount=1,InstanceType=m4.large InstanceGroupType=CORE,InstanceCount=2,InstanceType=m4.large InstanceGroupType=TASK,InstanceCount=1,InstanceType=m4.large \
     --no-auto-terminate
 ```
-- Configuración
-Name: cluster-retlab
-Amazon EMR release: emr-6.10.0
-Applications: 
-§ Hue 4.4.0
-§ Spark 2.4.3
-§ Hadoop 2.8.5
-§ Sqoop 1.4.7
-§ Hive 2.3.5
+*Configuración <br>
+Name: cluster-retlab <br>
+Amazon EMR release: emr-6.10.0 <br>
+Applications: <br>
+    § Hue 4.4.0
+    § Spark 2.4.3
+    § Hadoop 2.8.5
+    § Sqoop 1.4.7
+    § Hive 2.3.5
 
 Instance groups:
 Primary. m4.large.
