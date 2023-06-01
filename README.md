@@ -19,7 +19,7 @@
 <div id='AWS'/> 
 
 ### **1. Descarga de AWS CLI**
-[Descarga AWS](https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html) <br>
+[Descarga AWS CLI](https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html) <br>
 *Nota: en mi caso descargue en el SO de MacOS
 
 ![Captura de Pantalla 2023-05-31 a la(s) 11 13 51 p  m](https://github.com/mpocampod/Reto/assets/68925248/480235b9-156e-4bdc-8bc8-75728c10cebd)
