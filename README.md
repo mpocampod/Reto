@@ -92,7 +92,7 @@ Primary. m4.large.
 Core. m4.large
 Task. m4.large <br>
 **IAM roles:**
-Service Role: Seleccione EMR_DefaultRole.
+Service Role: Seleccione EMR_DefaultRole
 Instance profile: Seleccione EMR_EC2_DefaultRole
 
 Una vez creado el clúster por linea de comandos en nuestra cuenta de AWS se debe ver así 
@@ -106,3 +106,52 @@ Una vez creado el clúster por linea de comandos en nuestra cuenta de AWS se deb
 ![Captura de Pantalla 2023-05-31 a la(s) 12 19 49 p  m](https://github.com/mpocampod/Reto/assets/68925248/e67c9e8d-09a0-4fc7-a507-f1f00618e2b7)
 
 *******
+<div id='ejecución'/> 
+
+### **4. Ejecución de la versión serial/secuencial de la aplicación de wordcount-local.py**
+
+En primer lugar iniciaremos nuestra instancia EC2 principal con el siguiente comando, teniendo en cuenta que trabajaremos desde un ec2_user y no desde el root.
+
+ ```sh
+   ssh -i "emr.pem" ec2-user@ec2-54-160-244-71.compute-1.amazonaws.com 
+```
+![Captura de Pantalla 2023-05-31 a la(s) 12 38 39 p  m](https://github.com/mpocampod/Reto/assets/68925248/dbd87988-a862-4736-8ad8-ac207abb9ab4)
+
+Una vez dentro de la consola, actualizaremos yum e instalaremos git, python, pip y mrjob
+ ```sh
+    sudo yum update -y
+    sudo yum install git -y
+    sudo yum install python-pip -y
+    sudo pip install mrjob 
+```
+Y clonaremos el repositorio para poder ejectuar el programa
+ ```sh
+   git clone https://github.com/ST0263/st0263-2023-1.git
+```
+Una vez clonado se ejecutan los siguientes comandos
+ ```sh
+   cd st0263-2023-1/"Laboratorio N6-MapReduce"/wordcount
+   python wordcount-local.py ../../datasets/gutenberg-small/*.txt > salida-serial.txt
+   more salida-serial.txt
+   sudo nano salida-serial.txt
+```
+Mostrandonos este resultado en pantalla
+![Captura de Pantalla 2023-05-31 a la(s) 12 53 42 p  m](https://github.com/mpocampod/Reto/assets/68925248/2b6ae995-b84b-4e0c-9237-d2b60765b43d)
+
+<div id='Map'/> 
+
+### **5. Ejecución del programa utilizando el paradigma Map/Reduce**
+Ahora usando la libreria mrjob python local con el siguiente comando 
+ ```sh
+   python wordcount-mr.py ../../datasets/gutenberg-small/*.txt
+```
+Tendriamos este resultado
+
+![Captura de Pantalla 2023-05-31 a la(s) 1 02 56 p  m](https://github.com/mpocampod/Reto/assets/68925248/0d06a572-c1e4-49d0-90c2-7b48a0761562)
+*******
+
+**REFERENCIAS**
+https://github.com/ST0263/st0263-2023-1/tree/main/Laboratorio%20N6-MapReduce
+https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html
+*******
+
