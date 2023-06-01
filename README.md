@@ -38,7 +38,8 @@ Luego con las credenciales de IAM de nuestra sesion en AWS ejecutaremos los sigu
 ```sh
     aws configure
 ```
- ![Captura de Pantalla 2023-05-31 a la(s) 11 25 16 p  m](https://github.com/mpocampod/Reto/assets/68925248/9f26293f-9c72-4b43-ab59-3144ae41e7b7)
+![Captura de Pantalla 2023-05-31 a la(s) 10 57 34 a  m](https://github.com/mpocampod/Reto/assets/68925248/f2239dee-fa4a-484a-8be9-24801a21fc53)
+
 
 *******
 
