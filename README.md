@@ -78,14 +78,33 @@ aws emr create-cluster \
     --instance-groups InstanceGroupType=MASTER,InstanceCount=1,InstanceType=m4.large InstanceGroupType=CORE,InstanceCount=2,InstanceType=m4.large InstanceGroupType=TASK,InstanceCount=1,InstanceType=m4.large \
     --no-auto-terminate
 ```
+- Configuración
+Name: cluster-retlab
+Amazon EMR release: emr-6.10.0
+Applications: 
+§ Hue 4.4.0
+§ Spark 2.4.3
+§ Hadoop 2.8.5
+§ Sqoop 1.4.7
+§ Hive 2.3.5
 
-Una vez creado el clúster por linea de comandos en nuestra cuenta de AWS se debe ver así
-*** EMR ***
+Instance groups:
+Primary. m4.large.
+Core. m4.large
+Task. m4.large
+
+IAM roles:
+Service Role: Seleccione EMR_DefaultRole.
+Instance profile: Seleccione EMR_EC2_DefaultRole
+
+Una vez creado el clúster por linea de comandos en nuestra cuenta de AWS se debe ver así 
+
+**EMR**
 ![Captura de Pantalla 2023-05-31 a la(s) 12 18 40 p  m](https://github.com/mpocampod/Reto/assets/68925248/8c3d2adb-a2a6-41d3-8978-3737f35561c5)
 
 ![Captura de Pantalla 2023-05-31 a la(s) 12 18 31 p  m](https://github.com/mpocampod/Reto/assets/68925248/4b27642e-a55b-4b74-9979-270fb71198ac)
 
-*** Instancias EC2***
+**Instancias EC2**
 ![Captura de Pantalla 2023-05-31 a la(s) 12 19 49 p  m](https://github.com/mpocampod/Reto/assets/68925248/e67c9e8d-09a0-4fc7-a507-f1f00618e2b7)
 
 *******
