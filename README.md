@@ -166,6 +166,7 @@ Y luego ejecutaremos el comando para ejecutar el programa en un entorno Hadoop
    python wordcount-mr.py hdfs:///user/admin/datasets/gutenberg-small/*.txt -r hadoop --output-dir hdfs:///user/admin/result3
 ```
 Obteniendo el siguiente resultado
+
 ![Captura de Pantalla 2023-06-01 a la(s) 6 18 41 p  m](https://github.com/mpocampod/Reto/assets/68925248/35de39a3-7108-4eb6-8426-ed0fb4c2fcf5)
 
 ![Captura de Pantalla 2023-06-01 a la(s) 6 18 13 p  m](https://github.com/mpocampod/Reto/assets/68925248/d0dac2af-0713-4cc1-a1e4-30b2c7a3730c)
