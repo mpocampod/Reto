@@ -156,7 +156,7 @@ Por último crearemos una carpeta y copiaremos nuestro dataset en el emr con el 
 * Ten en cuenta que debes iniciar otra consola con hadoop
 
  ```sh
-   ssh -i "emr.pem" hadoop@ec2-174-129-50-230.compute-1.amazonaws.com
+   ssh -i "emr1.pem" hadoop@ec2-174-129-50-230.compute-1.amazonaws.com
 ```
  ```sh
    hdfs dfs -mkdir /user/admin/
