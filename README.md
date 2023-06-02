@@ -220,6 +220,8 @@ Luego lo ejecutamos con el siguiente comando
 ```
 
 Y tenemos como resultado 
+<img width="473" alt="Captura de pantalla 2023-06-02 a la(s) 3 29 59 a m" src="https://github.com/mpocampod/Reto/assets/68925248/2e7b1ee6-404a-4ab9-9e00-20859303942c">
+<img width="667" alt="Captura de pantalla 2023-06-02 a la(s) 3 30 08 a m" src="https://github.com/mpocampod/Reto/assets/68925248/fe124385-79d0-4b3c-aafa-e0a08b48e0f7">
 
 
 -S3
