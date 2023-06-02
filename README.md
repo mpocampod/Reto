@@ -311,7 +311,6 @@ Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular d
 Luego copiamos los datos en un directorio
 
 ```sh 
-      hdfs dfs -mkdir /user/admin/
       hdfs dfs -put dataempresas.txt hdfs:///user/admin/dataempresas.txt
 ```
 a. Por acción, dia-menor-valor, día-mayor-valor
@@ -416,7 +415,6 @@ Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular d
 Luego copiamos los datos en un directorio
 
 ```sh
-      hdfs dfs -mkdir /user/admin/
       hdfs dfs -put datapeliculas.txt hdfs:///user/admin/datapeliculas.txt
 ```
 a. Número de películas vista por un usuario, valor promedio de calificación
@@ -537,6 +535,9 @@ Para la creación en S3 utilizamos el siguiente comando
     python dia_menos_peliculas.py hdfs:///user/admin/datapeliculas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test3/3d
       hdfs dfs -cat s3://mpocampod-lab6-emr/test3/3d/*
 ```
+<img width="1096" alt="Captura de pantalla 2023-06-02 a la(s) 4 43 25 a m" src="https://github.com/mpocampod/Reto/assets/68925248/edf2d50d-a805-4748-b5f0-eaabd3c94b1d">
+
+
 e. Día en que peor evaluación en promedio han dado los usuarios
 
 -Local 
@@ -556,6 +557,8 @@ Luego lo ejecutamos con el siguiente comando
 
 Y tenemos como resultado 
 
+<img width="519" alt="Captura de pantalla 2023-06-02 a la(s) 4 44 53 a m" src="https://github.com/mpocampod/Reto/assets/68925248/55b0c5d8-1216-40ea-8c63-d4faa44d0a5a">
+
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -563,6 +566,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python peor_evaluacion.py hdfs:///user/admin/datapeliculas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test3/3e
       hdfs dfs -cat s3://mpocampod-lab6-emr/test3/3e/*
 ```
+<img width="1077" alt="Captura de pantalla 2023-06-02 a la(s) 4 47 29 a m" src="https://github.com/mpocampod/Reto/assets/68925248/e1dc76f1-24d4-4018-bd93-895ede2aaadd">
+
 
 f. Día en que mejor evaluación han dado los usuarios
 
@@ -582,6 +587,7 @@ Luego lo ejecutamos con el siguiente comando
 ```
 
 Y tenemos como resultado 
+<img width="517" alt="Captura de pantalla 2023-06-02 a la(s) 4 49 03 a m" src="https://github.com/mpocampod/Reto/assets/68925248/73f28aea-9a1f-4196-ad78-8347d278dbf5">
 
 
 -S3
@@ -590,6 +596,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python mejor_evaluacion.py hdfs:///user/admin/datapeliculas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test3/3f
       hdfs dfs -cat s3://mpocampod-lab6-emr/test3/3f/*
 ```
+<img width="1069" alt="Captura de pantalla 2023-06-02 a la(s) 4 51 19 a m" src="https://github.com/mpocampod/Reto/assets/68925248/0e2601bb-2f68-499a-8e53-02570274bf01">
+
 
 g. La mejor y peor película evaluada por genero
 -Local 
@@ -608,6 +616,7 @@ Luego lo ejecutamos con el siguiente comando
 ```
 
 Y tenemos como resultado 
+<img width="517" alt="Captura de pantalla 2023-06-02 a la(s) 4 52 51 a m" src="https://github.com/mpocampod/Reto/assets/68925248/3622cb80-eb1d-4b09-9e65-419f91d2e9f5">
 
 
 -S3
@@ -616,6 +625,7 @@ Para la creación en S3 utilizamos el siguiente comando
     python pelicula_genero.py hdfs:///user/admin/datapeliculas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test3/3g
       hdfs dfs -cat s3://mpocampod-lab6-emr/test3/3g/*
 ```
+<img width="1036" alt="Captura de pantalla 2023-06-02 a la(s) 4 55 36 a m" src="https://github.com/mpocampod/Reto/assets/68925248/e3c02333-ff44-4382-a583-f63960c5c5d2">
 
 *******
 
