@@ -73,7 +73,7 @@ aws emr create-cluster \
     --name cluster-retlab \
     --release-label emr-6.10.0 \
     --service-role EMR_DefaultRole \
-    --ec2-attributes KeyName=emr,InstanceProfile=EMR_EC2_DefaultRole \
+    --ec2-attributes KeyName=emr1,InstanceProfile=EMR_EC2_DefaultRole \
     --applications Name=Hue Name=Spark Name=Hadoop Name=Sqoop Name=Hive \
     --instance-groups InstanceGroupType=MASTER,InstanceCount=1,InstanceType=m4.large InstanceGroupType=CORE,InstanceCount=2,InstanceType=m4.large InstanceGroupType=TASK,InstanceCount=1,InstanceType=m4.large \
     --no-auto-terminate
