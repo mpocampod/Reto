@@ -254,6 +254,10 @@ Luego lo ejecutamos con el siguiente comando
 
 Y tenemos como resultado 
 
+<img width="504" alt="Captura de pantalla 2023-06-02 a la(s) 3 38 23 a m" src="https://github.com/mpocampod/Reto/assets/68925248/95251592-0849-4b21-a7d7-97b21aadedcf">
+
+<img width="549" alt="Captura de pantalla 2023-06-02 a la(s) 3 38 44 a m" src="https://github.com/mpocampod/Reto/assets/68925248/3c900b06-c4ab-4617-af36-a916f7a4a3c5">
+
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -261,8 +265,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python salario_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test1/1b
       hdfs dfs -cat s3://mpocampod-lab6-emr/test1/1b/*
 ```
+<img width="1068" alt="Captura de pantalla 2023-06-02 a la(s) 3 46 13 a m" src="https://github.com/mpocampod/Reto/assets/68925248/66eb101c-e209-45f6-9d7d-bc4e563ec05a">
 
-Imagen
 
 c. Número de SE por Empleado que ha tenido a lo largo de la estadística
 
@@ -286,6 +290,8 @@ Luego lo ejecutamos con el siguiente comando
 
 Y tenemos como resultado 
 
+<img width="506" alt="Captura de pantalla 2023-06-02 a la(s) 3 45 01 a m" src="https://github.com/mpocampod/Reto/assets/68925248/eeb1063e-926a-4752-ac4f-53454b26ee50">
+<img width="514" alt="Captura de pantalla 2023-06-02 a la(s) 3 45 10 a m" src="https://github.com/mpocampod/Reto/assets/68925248/7d89ce8a-690b-4fca-8147-463159d6455a">
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -293,6 +299,7 @@ Para la creación en S3 utilizamos el siguiente comando
     python sector_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test1/1c
       hdfs dfs -cat s3://mpocampod-lab6-emr/test1/1c/*
 ```
+<img width="1031" alt="Captura de pantalla 2023-06-02 a la(s) 3 49 10 a m" src="https://github.com/mpocampod/Reto/assets/68925248/3efe6b97-f2c7-4087-936d-9a23b31d7c51">
 
 
 **Segundo punto**
