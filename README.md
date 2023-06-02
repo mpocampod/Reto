@@ -333,6 +333,8 @@ Luego lo ejecutamos con el siguiente comando
 
 Y tenemos como resultado 
 
+<img width="492" alt="Captura de pantalla 2023-06-02 a la(s) 4 11 51 a m" src="https://github.com/mpocampod/Reto/assets/68925248/cb8b9b5d-2e30-4c83-8679-dcdd29057160">
+
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -340,6 +342,7 @@ Para la creación en S3 utilizamos el siguiente comando
     python accion_fecha.py hdfs:///user/admin/dataempresas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test2/2a
       hdfs dfs -cat s3://mpocampod-lab6-emr/test2/2a/*
 ```
+<img width="1086" alt="Captura de pantalla 2023-06-02 a la(s) 4 14 16 a m" src="https://github.com/mpocampod/Reto/assets/68925248/5486625a-8454-4ee0-b9b3-504c4d71c74a">
 
 
 b. Listado de acciones que siempre han subido o se mantienen estables.
@@ -360,6 +363,7 @@ Luego lo ejecutamos con el siguiente comando
 ```
 
 Y tenemos como resultado 
+<img width="497" alt="Captura de pantalla 2023-06-02 a la(s) 4 16 08 a m" src="https://github.com/mpocampod/Reto/assets/68925248/60a45139-46f8-47e6-af1d-c64d447f482a">
 
 
 -S3
@@ -368,6 +372,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python acciones_estables.py hdfs:///user/admin/dataempresas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test2/2b
       hdfs dfs -cat s3://mpocampod-lab6-emr/test2/2b/*
 ```
+<img width="1018" alt="Captura de pantalla 2023-06-02 a la(s) 4 18 42 a m" src="https://github.com/mpocampod/Reto/assets/68925248/13b42b0a-02d0-44b2-a15c-d66137cccf90">
+
 
 c. DIA NEGRO: Día en el que la mayor cantidad de acciones tienen el menor valor de acción (DESPLOME), suponiendo una inflación independiente del tiempo.
 
@@ -388,6 +394,8 @@ Luego lo ejecutamos con el siguiente comando
 
 Y tenemos como resultado 
 
+<img width="267" alt="Captura de pantalla 2023-06-02 a la(s) 4 20 30 a m" src="https://github.com/mpocampod/Reto/assets/68925248/49528158-d7fd-490c-b6b0-37919f6de1c0">
+
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -395,6 +403,7 @@ Para la creación en S3 utilizamos el siguiente comando
     python dia_negro.py hdfs:///user/admin/dataempresas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test2/2c
       hdfs dfs -cat s3://mpocampod-lab6-emr/test2/2c/*
 ```
+<img width="1018" alt="Captura de pantalla 2023-06-02 a la(s) 4 23 15 a m" src="https://github.com/mpocampod/Reto/assets/68925248/6a468400-7c98-40ca-a930-a4d207db327b">
 
 
 **Tercer punto**
@@ -427,8 +436,9 @@ Luego lo ejecutamos con el siguiente comando
     hdfs dfs -cat /user/admin/punto3a/*
 ```
 
-Y tenemos como resultado 
+Y tenemos como resultado
 
+<img width="708" alt="Captura de pantalla 2023-06-02 a la(s) 4 26 30 a m" src="https://github.com/mpocampod/Reto/assets/68925248/402fd72e-33ab-4c96-add6-f4f43ac50298">
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -436,6 +446,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python peliculas_usuario_promedio.py hdfs:///user/admin/datapeliculas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test3/3a
       hdfs dfs -cat s3://mpocampod-lab6-emr/test3/3a/*
 ```
+<img width="1033" alt="Captura de pantalla 2023-06-02 a la(s) 4 29 35 a m" src="https://github.com/mpocampod/Reto/assets/68925248/396c344d-3e72-4fb9-b1ef-d82d78282f7f">
+
 
 b. Día en que más películas se han visto
 -Local 
@@ -455,6 +467,9 @@ Luego lo ejecutamos con el siguiente comando
 
 Y tenemos como resultado 
 
+<img width="518" alt="Captura de pantalla 2023-06-02 a la(s) 4 32 28 a m" src="https://github.com/mpocampod/Reto/assets/68925248/09a75304-ce0b-43f5-867f-d52a854ba8fa">
+
+
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -462,6 +477,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python dia_mas_peliculas.py hdfs:///user/admin/datapeliculas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test3/3b
       hdfs dfs -cat s3://mpocampod-lab6-emr/test3/3b/*
 ```
+<img width="1023" alt="Captura de pantalla 2023-06-02 a la(s) 4 35 06 a m" src="https://github.com/mpocampod/Reto/assets/68925248/938c46c1-d139-4c6f-8842-70a9a931b470">
+
 
 c. Día en que menos películas se han visto
 -Local 
@@ -481,6 +498,8 @@ Luego lo ejecutamos con el siguiente comando
 
 Y tenemos como resultado 
 
+<img width="519" alt="Captura de pantalla 2023-06-02 a la(s) 4 36 50 a m" src="https://github.com/mpocampod/Reto/assets/68925248/90c3d40a-a9e9-49b1-b72a-4d2f443ebc5b">
+
 
 -S3
 Para la creación en S3 utilizamos el siguiente comando
@@ -488,6 +507,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python dia_menos_peliculas.py hdfs:///user/admin/datapeliculas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test3/3c
       hdfs dfs -cat s3://mpocampod-lab6-emr/test3/3c/*
 ```
+<img width="1083" alt="Captura de pantalla 2023-06-02 a la(s) 4 39 08 a m" src="https://github.com/mpocampod/Reto/assets/68925248/849cdf70-3d08-41f6-b468-a41a9075525d">
+
 
 d. Número de usuarios que ven una misma película y el rating promedio
 -Local 
@@ -506,6 +527,8 @@ Luego lo ejecutamos con el siguiente comando
 ```
 
 Y tenemos como resultado 
+
+<img width="728" alt="Captura de pantalla 2023-06-02 a la(s) 4 40 56 a m" src="https://github.com/mpocampod/Reto/assets/68925248/831d9f6c-32bc-4139-824a-07a3fe850ab0">
 
 
 -S3
