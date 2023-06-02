@@ -13,6 +13,7 @@
 3. [Creación del clúster en consola](#Cluster) 
 4. [Ejecución de la versión serial/secuencial de la aplicación de wordcount-local.py](#ejecución) 
 5. [Ejecución del programa utilizando el paradigma Map/Reduce](#Map)<br>
+6. [Reto 5](#reto)<br>
 
 *******
 
@@ -175,7 +176,9 @@ Obteniendo el siguiente resultado
 
 *******
 
-# **Reto 5**
+<div id='reto'/> 
+
+### **1. Reto 5**
 
 *******
 
