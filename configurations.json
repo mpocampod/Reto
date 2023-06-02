@@ -1,0 +1,53 @@
+{
+    "Name": "cluster-retlab",
+    "ReleaseLabel": "emr-6.10.0",
+    "Instances": {
+      "InstanceGroups": [
+        {
+          "Name": "MasterNode",
+          "Market": "ON_DEMAND",
+          "InstanceRole": "MASTER",
+          "InstanceType": "m4.large",
+          "InstanceCount": 1
+        },
+        {
+          "Name": "CoreNode",
+          "Market": "ON_DEMAND",
+          "InstanceRole": "CORE",
+          "InstanceType": "m4.large",
+          "InstanceCount": 2
+        },
+        {
+          "Name": "CoreNode",
+          "Market": "ON_DEMAND",
+          "InstanceRole": "TASK",
+          "InstanceType": "m4.large",
+          "InstanceCount": 1
+        }
+      ]
+    },
+    "Applications": [
+      {
+        "Name": "Hadoop"
+      },
+      {
+        "Name": "Spark"
+      },
+      {
+        "Name": "Hue"
+      },
+      {
+        "Name": "Sqoop"
+      },
+      {
+        "Name": "Hive"
+      },
+      {
+
+      }
+    ],
+    "VisibleToAllUsers": true,
+    "JobFlowRole": "EMR_EC2_DefaultRole",
+    "ServiceRole": "EMR_DefaultRole"
+  }
+  
