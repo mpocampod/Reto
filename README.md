@@ -115,7 +115,7 @@ Una vez creado el clúster por linea de comandos en nuestra cuenta de AWS se deb
 En primer lugar iniciaremos nuestra instancia EC2 principal con el siguiente comando, teniendo en cuenta que trabajaremos desde un ec2_user y no desde el root.
 
  ```sh
-   ssh -i "emr.pem" ec2-user@ec2-54-160-244-71.compute-1.amazonaws.com 
+   ssh -i "emr1.pem" ec2-user@ec2-54-160-244-71.compute-1.amazonaws.com 
 ```
 ![Captura de Pantalla 2023-05-31 a la(s) 12 38 39 p  m](https://github.com/mpocampod/Reto/assets/68925248/dbd87988-a862-4736-8ad8-ac207abb9ab4)
 
@@ -182,7 +182,7 @@ Obteniendo el siguiente resultado
 
 *******
 
-Parte del laboratorio realizado anteriormente es la base para la continuación del reto 5, empezamos clonando en la instancia principal ec2 el repositorio donde est'an almacenados los códigos.
+Parte del laboratorio realizado anteriormente es la base para la continuación del reto 5, empezamos clonando en la instancia principal ec2 el repositorio donde están almacenados los códigos.
  ```sh
       git clone https://github.com/mpocampod/Reto.git
       cd Reto/retoCodigos/
