@@ -234,6 +234,7 @@ Imagen
  ```sh
      python3 salario_empleado.py  dataempleados.txt	
 ```
+<img width="1027" alt="Captura de pantalla 2023-06-01 a la(s) 9 47 06 p m" src="https://github.com/mpocampod/Reto/assets/68925248/5b616ce5-3b65-4770-b33d-dba64434ec24">
 
 
 - EMR
