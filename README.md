@@ -175,6 +175,90 @@ Obteniendo el siguiente resultado
 
 *******
 
+# **Reto 5**
+
+*******
+
+Parte del laboratorio realizado anteriormente es la base para la continuación del reto 5, empezamos clonando en la instancia principal ec2 el repositorio donde est'an almacenados los códigos.
+ ```sh
+      git clone https://github.com/mpocampod/Reto.git
+      cd Reto/retoCodigos/
+```
+
+**Primer punto**
+Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular de acuerdo a un conjunto de datos los siguientes puntos, en primer lugar comenzamos accediendo a la carpeta donde se encuentra la información
+comenzamos accediendo a la carpeta donde se encuentra la información
+```sh
+      cd dian
+```
+Luego copiamos los datos en un directorio
+
+```sh
+      hdfs dfs -put dataempleados.txt hdfs:///user/admin/dataempleados.txt
+```
+ a.  El salario promedio por Sector Económico (SE)
+ 
+-Local
+ 
+ ```sh
+     python3 salario_sector_economico.py  dataempleados.txt	
+```
+
+<img width="1086" alt="Captura de pantalla 2023-06-01 a la(s) 9 36 41 p m" src="https://github.com/mpocampod/Reto/assets/68925248/ded9e8b7-9bbc-4c24-beee-d8d405a89e12">
+
+ - EMR
+```sh
+    python salario_sector_economico.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/punto1a
+```
+Luego lo ejecutamos con el siguiente comando 
+```sh
+    hdfs dfs -cat /user/admin/punto1a/*
+```
+
+Y tenemos como resultado 
+
+
+-S3
+Para la creación en S3 utilizamos el siguiente comando
+```sh
+    python salario_sector_economico.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test1/1a
+      hdfs dfs -cat s3://mpocampod-lab6-emr/test1/1a/*
+```
+
+Imagen 
+
+ b. El salario promedio por Empleado
+ 
+-Local
+ 
+ ```sh
+     python3 salario_empleado.py  dataempleados.txt	
+```
+
+
+- EMR
+```sh
+    python salario_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/punto1b
+```
+Luego lo ejecutamos con el siguiente comando 
+```sh
+    hdfs dfs -cat /user/admin/punto1b/*
+```
+
+Y tenemos como resultado 
+
+
+-S3
+Para la creación en S3 utilizamos el siguiente comando
+```sh
+    python salario_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test2/1b
+      hdfs dfs -cat s3://mpocampod-lab6-emr/test2/1b/*
+```
+
+
+*******
+
+
 **REFERENCIAS** <br>
 https://github.com/ST0263/st0263-2023-1/tree/main/Laboratorio%20N6-MapReduce
 https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html
