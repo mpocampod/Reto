@@ -187,7 +187,7 @@ Parte del laboratorio realizado anteriormente es la base para la continuación d
 
 **Primer punto**
 Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular de acuerdo a un conjunto de datos los siguientes puntos, en primer lugar comenzamos accediendo a la carpeta donde se encuentra la información
-comenzamos accediendo a la carpeta donde se encuentra la información
+
 ```sh
       cd dian
 ```
@@ -252,10 +252,146 @@ Y tenemos como resultado
 -S3
 Para la creación en S3 utilizamos el siguiente comando
 ```sh
-    python salario_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test2/1b
-      hdfs dfs -cat s3://mpocampod-lab6-emr/test2/1b/*
+    python salario_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test1/1b
+      hdfs dfs -cat s3://mpocampod-lab6-emr/test1/1b/*
 ```
 
+Imagen
+
+c. Número de SE por Empleado que ha tenido a lo largo de la estadística
+
+-Local
+ 
+ ```sh
+     python3 sector_empleado.py  dataempleados.txt	
+```
+
+<img width="1050" alt="Captura de pantalla 2023-06-01 a la(s) 10 03 31 p m" src="https://github.com/mpocampod/Reto/assets/68925248/00a8b925-616e-45bb-9a31-8bb02b4524f0">
+
+
+- EMR
+```sh
+    python sector_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/punto1c
+```
+Luego lo ejecutamos con el siguiente comando 
+```sh
+    hdfs dfs -cat /user/admin/punto1c/*
+```
+
+Y tenemos como resultado 
+
+
+-S3
+Para la creación en S3 utilizamos el siguiente comando
+```sh
+    python sector_empleado.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test1/1c
+      hdfs dfs -cat s3://mpocampod-lab6-emr/test1/1c/*
+```
+
+
+**Segundo punto**
+Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular de acuerdo a un conjunto de datos los siguientes puntos, en primer lugar comenzamos accediendo a la carpeta donde se encuentra la información
+
+```sh
+      cd bolsa
+```
+Luego copiamos los datos en un directorio
+
+```sh
+      hdfs dfs -put dataempresas.txt hdfs:///user/admin/dataempresas.txt
+```
+a. Por acción, dia-menor-valor, día-mayor-valor
+
+-Local
+```sh
+        python accion_fecha.py  dataempresas.txt
+```
+<img width="990" alt="Captura de pantalla 2023-06-01 a la(s) 10 32 48 p m" src="https://github.com/mpocampod/Reto/assets/68925248/c1e18753-8b97-4b09-9f4a-b072172c705b">
+
+-EMR
+```sh
+        python accion_fecha.py hdfs:///user/admin/punto2/dataset.txt -r hadoop --output-dir hdfs:///user/admin/punto2a
+```
+b. Listado de acciones que siempre han subido o se mantienen estables.
+
+-Local
+```sh
+        python acciones_estables.py  dataempresas.txt
+```
+<img width="1051" alt="Captura de pantalla 2023-06-01 a la(s) 10 58 41 p m" src="https://github.com/mpocampod/Reto/assets/68925248/504f7fbe-85c0-4eb5-8f9f-4c1fd1f0575c">
+
+c. DIA NEGRO: Día en el que la mayor cantidad de acciones tienen el menor valor de acción (DESPLOME), suponiendo una inflación independiente del tiempo.
+
+-Local
+```sh
+        python dia_negro.py  dataempresas.txt
+```
+<img width="1050" alt="Captura de pantalla 2023-06-01 a la(s) 11 26 06 p m" src="https://github.com/mpocampod/Reto/assets/68925248/a95e9194-e881-48e7-a9a1-15ac1cd9e160">
+
+
+**Tercer punto**
+
+Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular de acuerdo a un conjunto de datos los siguientes puntos, en primer lugar comenzamos accediendo a la carpeta donde se encuentra la información
+
+```sh
+      cd peliculas
+```
+Luego copiamos los datos en un directorio
+
+```sh
+      hdfs dfs -put datapeliculas.txt hdfs:///user/admin/datapeliculas.txt
+```
+a. Número de películas vista por un usuario, valor promedio de calificación
+
+-Local 
+```sh
+       python peliculas_usuario_promedio.py datapeliculas.txt
+```
+<img width="1106" alt="Captura de pantalla 2023-06-02 a la(s) 12 08 04 a m" src="https://github.com/mpocampod/Reto/assets/68925248/6fb66105-3186-408b-a1f3-6dfe016a0266">
+
+b. Día en que más películas se han visto
+-Local 
+```sh
+       python dia_mas_peliculas.py datapeliculas.txt
+```
+<img width="1072" alt="Captura de pantalla 2023-06-02 a la(s) 12 19 06 a m" src="https://github.com/mpocampod/Reto/assets/68925248/68da29ca-1e20-4d8b-91ef-668c4ca09616">
+
+c. Día en que menos películas se han visto
+-Local 
+```sh
+       python dia_menos_peliculas.py datapeliculas.txt
+```
+<img width="1061" alt="Captura de pantalla 2023-06-02 a la(s) 2 50 01 a m" src="https://github.com/mpocampod/Reto/assets/68925248/d4030168-869a-4687-ad9a-586ac7a474b8">
+
+d. Número de usuarios que ven una misma película y el rating promedio
+-Local 
+```sh
+       python usuarios_peliculas.py datapeliculas.txt
+```
+<img width="1088" alt="Captura de pantalla 2023-06-02 a la(s) 12 34 39 a m" src="https://github.com/mpocampod/Reto/assets/68925248/c4724e02-150c-4a9c-b067-7f21c06062cb">
+
+f. Día en que peor evaluación en promedio han dado los usuarios
+
+-Local 
+```sh
+       python peor_evaluacion.py datapeliculas.txt
+```
+<img width="1039" alt="Captura de pantalla 2023-06-02 a la(s) 12 40 51 a m" src="https://github.com/mpocampod/Reto/assets/68925248/2ab8212a-7f8a-4239-86a1-9d7bc75013b8">
+
+f. Día en que mejor evaluación han dado los usuarios
+
+Local 
+```sh
+       python mejor_evaluacion.py datapeliculas.txt
+```
+<img width="1067" alt="Captura de pantalla 2023-06-02 a la(s) 12 42 45 a m" src="https://github.com/mpocampod/Reto/assets/68925248/0b2ccc78-d384-4bf7-973c-f1f57ac36e3a">
+
+g. La mejor y peor película evaluada por genero
+-Local 
+```sh
+       python pelicula_genero.py datapeliculas.txt
+```
+<img width="1052" alt="Captura de pantalla 2023-06-02 a la(s) 12 55 28 a m" src="https://github.com/mpocampod/Reto/assets/68925248/d2792662-5c1c-4a24-966b-2faebcb4e37f">
 
 *******
 
