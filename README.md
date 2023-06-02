@@ -310,7 +310,8 @@ Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular d
 ```
 Luego copiamos los datos en un directorio
 
-```sh
+```sh 
+      hdfs dfs -mkdir /user/admin/
       hdfs dfs -put dataempresas.txt hdfs:///user/admin/dataempresas.txt
 ```
 a. Por acción, dia-menor-valor, día-mayor-valor
@@ -321,10 +322,25 @@ a. Por acción, dia-menor-valor, día-mayor-valor
 ```
 <img width="990" alt="Captura de pantalla 2023-06-01 a la(s) 10 32 48 p m" src="https://github.com/mpocampod/Reto/assets/68925248/c1e18753-8b97-4b09-9f4a-b072172c705b">
 
--EMR
+- EMR
 ```sh
-        python accion_fecha.py hdfs:///user/admin/punto2/dataset.txt -r hadoop --output-dir hdfs:///user/admin/punto2a
+    python accion_fecha.py hdfs:///user/admin/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/punto2a
 ```
+Luego lo ejecutamos con el siguiente comando 
+```sh
+    hdfs dfs -cat /user/admin/punto2a/*
+```
+
+Y tenemos como resultado 
+
+
+-S3
+Para la creación en S3 utilizamos el siguiente comando
+```sh
+    python accion_fecha.py hdfs:///user/admin/dataempresas.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test2/2a
+      hdfs dfs -cat s3://mpocampod-lab6-emr/test2/2a/*
+```
+<img width="1031" alt="Captura de pantalla 2023-06-02 a la(s) 3 49 10 a m" src="https://github.com/mpocampod/Reto/assets/68925248/3efe6b97-f2c7-4087-936d-9a23b31d7c51">
 b. Listado de acciones que siempre han subido o se mantienen estables.
 
 -Local
