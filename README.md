@@ -96,6 +96,7 @@ Service Role: Seleccione EMR_DefaultRole
 Instance profile: Seleccione EMR_EC2_DefaultRole
 
 Una vez creado el clúster por linea de comandos en nuestra cuenta de AWS se debe ver así 
+![Captura de Pantalla 2023-06-01 a la(s) 4 33 33 p  m](https://github.com/mpocampod/Reto/assets/68925248/bf08e5bb-5ed7-4901-a595-1b106b8cc363)
 
 **EMR**
 ![Captura de Pantalla 2023-05-31 a la(s) 12 18 40 p  m](https://github.com/mpocampod/Reto/assets/68925248/8c3d2adb-a2a6-41d3-8978-3737f35561c5)
@@ -137,7 +138,8 @@ Una vez clonado se ejecutan los siguientes comandos
 ```
 Mostrandonos este resultado en pantalla
 
-![Captura de Pantalla 2023-05-31 a la(s) 12 53 42 p  m](https://github.com/mpocampod/Reto/assets/68925248/2b6ae995-b84b-4e0c-9237-d2b60765b43d)
+![Captura de Pantalla 2023-06-01 a la(s) 5 17 41 p  m](https://github.com/mpocampod/Reto/assets/68925248/2d657c31-8a7c-48a0-870c-21c060a45685)
+ 
 
 <div id='Map'/> 
 
@@ -147,8 +149,28 @@ Ahora usando la libreria mrjob python local con el siguiente comando
    python wordcount-mr.py ../../datasets/gutenberg-small/*.txt
 ```
 Tendriamos este resultado
+![Captura de Pantalla 2023-06-01 a la(s) 6 12 30 p  m](https://github.com/mpocampod/Reto/assets/68925248/c24f55ab-dbdc-4a99-a559-4d41d7084d96)
 
-![Captura de Pantalla 2023-05-31 a la(s) 1 02 56 p  m](https://github.com/mpocampod/Reto/assets/68925248/0d06a572-c1e4-49d0-90c2-7b48a0761562)
+Por último crearemos una carpeta y copiaremos nuestro dataset en el emr con el siguiente comando 
+* Ten en cuenta que debes iniciar otra consola con hadoop
+
+ ```sh
+   ssh -i "emr.pem" hadoop@ec2-174-129-50-230.compute-1.amazonaws.com
+```
+ ```sh
+   hdfs dfs -mkdir /user/admin/
+   hdfs dfs -copyFromLocal /home/hadoop/st0263-2023-1/datasets/ /user/admin/
+```
+Y luego ejecutaremos el comando para ejecutar el programa en un entorno Hadoop
+ ```sh
+   python wordcount-mr.py hdfs:///user/admin/datasets/gutenberg-small/*.txt -r hadoop --output-dir hdfs:///user/admin/result3
+```
+Obteniendo el siguiente resultado
+![Captura de Pantalla 2023-06-01 a la(s) 6 18 41 p  m](https://github.com/mpocampod/Reto/assets/68925248/35de39a3-7108-4eb6-8426-ed0fb4c2fcf5)
+
+![Captura de Pantalla 2023-06-01 a la(s) 6 18 13 p  m](https://github.com/mpocampod/Reto/assets/68925248/d0dac2af-0713-4cc1-a1e4-30b2c7a3730c)
+ 
+
 *******
 
 **REFERENCIAS** <br>
