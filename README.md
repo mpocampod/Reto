@@ -149,6 +149,7 @@ Ahora usando la libreria mrjob python local con el siguiente comando
    python wordcount-mr.py ../../datasets/gutenberg-small/*.txt
 ```
 Tendriamos este resultado
+
 ![Captura de Pantalla 2023-06-01 a la(s) 6 12 30 p  m](https://github.com/mpocampod/Reto/assets/68925248/c24f55ab-dbdc-4a99-a559-4d41d7084d96)
 
 Por último crearemos una carpeta y copiaremos nuestro dataset en el emr con el siguiente comando 
