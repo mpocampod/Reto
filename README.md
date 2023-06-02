@@ -230,8 +230,8 @@ Para la creación en S3 utilizamos el siguiente comando
     python salario_sector_economico.py hdfs:///user/admin/dataempleados.txt -r hadoop --output-dir s3://mpocampod-lab6-emr/test1/1a
       hdfs dfs -cat s3://mpocampod-lab6-emr/test1/1a/*
 ```
+<img width="1120" alt="Captura de pantalla 2023-06-02 a la(s) 3 34 06 a m" src="https://github.com/mpocampod/Reto/assets/68925248/9a14d895-0b4f-426b-9c79-4823a31e516a">
 
-Imagen 
 
  b. El salario promedio por Empleado
  
