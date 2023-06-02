@@ -1,4 +1,4 @@
-# **Reto 6**
+# **Laboratorio y reto**
 
 **Nombre:** Paulina Ocampo Duque <br>
 **Curso:** Tópicos Especiales en Telemática <br>
