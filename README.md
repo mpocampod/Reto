@@ -197,7 +197,8 @@ Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular d
 Luego copiamos los datos en un directorio
 
 ```sh
-      hdfs dfs -put dataempleados.txt hdfs:///user/admin/dataempleados.txt
+     hdfs dfs -mkdir /user/admin/
+     hdfs dfs -put dataempleados.txt hdfs:///user/admin/dataempleados.txt
 ```
  a.  El salario promedio por Sector Económico (SE)
  
